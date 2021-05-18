@@ -10,34 +10,24 @@ const clearListBtn = document.getElementById('todo-clear');
 const listParent = document.getElementById('todo-items');
 
 addItemBtn.addEventListener('click', () => { // + Button
-
     inputFilter();
-
 });
 
 clearListBtn.addEventListener('click', () => {
-    
     clearAllItems();
-
 });
 
 // "todoInput" Input Value Filter
 function inputFilter() {
 
     if (todoInput.value.length === 0 || todoInput.value.length > 50) { // If Empty or Too Long Input
-
         invalidInput();
         inputClear();
-
     } else if (todoInput.value.length > 0) { // If Valid Input
-
         validInput();
-
     } else { // If Error
-
         unexpectedInput();
         inputClear();
-
     }
 
 }
@@ -49,19 +39,15 @@ function invalidInput() {
     todoInput.style.backgroundColor = "#af000026"; // Red
     
     setTimeout(() => {
-
         todoInput.placeholder = "Add to your todo list";
         todoInput.style.backgroundColor = "transparent";
-
     }, 2000);
 
 }
 
 // Valid todoInput
 function validInput() {
-
     extendedForm();
-
 }
 
 // Extended Form (Upon Valid todoInput Value)
@@ -140,15 +126,11 @@ function extendedForm() {
                 buttonsDiv.appendChild(completeForm);
 
     exitButton.addEventListener('click', () => {
-
         deleteElements(); // Deletes (Exits) Extended Form
-    
     });
 
     completeForm.addEventListener('click', () => {
-
         checkFormValues(); // Checks Form Values
-
     });
 
 }
@@ -159,14 +141,10 @@ function deleteElements() {
     const background = document.getElementById('extended-form-background');
     
     if (background.hasChildNodes) { // If background has child elements
-
         background.removeChild(background.firstChild);
         main.removeChild(background);
-
     } else { // Unexpected Error
-
         console.error('Unexpected Error while deleting children of background.')
-
     }
 
 }
@@ -179,56 +157,37 @@ function checkFormValues() {
     const timeOfDay = document.getElementById('todo-item-time');
 
     if (itemName.value.length === 0 || itemName.value.length > 50) { // If Empty or Too Long Input
-
         invalidTaskName();
-
     } 
 
     if (!itemDeadline.value) { // If Empty
-
         invalidDeadline();
-
     }
 
     if (!timeOfDay.value) { // If Empty
-
         invalidTime();
-
     }
 
     if (itemName.value.length > 0 && itemDeadline.value.length > 0 && timeOfDay.value.length > 0) {
-
         createListItem();
-
     }
-
 }
 
 // Invalid Task Name (Extended Form)
 function invalidTaskName() {
-
-    const itemName = document.getElementById('todo-item-name');
-
     invalidFormInput(itemName);
-
 }
 
 // Invalid Deadline [input type="date"] (Extended Form)
 function invalidDeadline() {
-
     const itemDeadline = document.getElementById('todo-item-deadline');
-
     invalidFormInput(itemDeadline);
-
 }
 
 // Invalid Time [input type="time"] (Extended Form)
 function invalidTime() {
-
     const timeOfDay = document.getElementById('todo-item-time');
-
     invalidFormInput(timeOfDay);
-
 }
 
 // Successfully Creates a New List Item
@@ -289,6 +248,7 @@ function createListItem() {
 
             const completeButton = document.createElement('button');
             completeButton.className = 'complete-button';
+            completeButton.setAttribute("onclick", "complete(this);");
             flexItem4.appendChild(completeButton);
 
                 const completeSVG = document.createElement('object');
@@ -305,35 +265,25 @@ function createListItem() {
                 deleteButton.appendChild(deleteSVG);
 
     deleteElements();
-
     inputClear();
-
 }
 
 // Unexpected / Error todoInput
 function unexpectedInput() {
-
     console.error("Unexpected Error with todoInput.value");
     console.error(`todoInput.value had the value of --> "${todoInput.value}"`)
-
 }
 
 // Clears todoInput (QoL)
 function inputClear() {
-
     todoInput.value = "";
-
 }
 
 // Remove All Items
 function clearAllItems() {
-
     while (listParent.firstChild) {
-
         listParent.removeChild(listParent.lastChild)
-
     }
-
 }
 
 // Invalid Input Function
@@ -349,11 +299,13 @@ function invalidFormInput(field) {
 
 }
 
+function complete(task) {
+
+}
+
 // Delete List Item
 function remove(element) {
-
     element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
-
 }
 
 
