@@ -225,9 +225,8 @@ function createListItem() {
             flexItem2.appendChild(deadlineSVG);
 
             const date = document.createElement('p');
-            date.textContent = itemDeadline.value;
             date.className = 'deadline';
-            flexItem2.appendChild(date);
+            flexItem2.appendChild(date);  
 
         const flexItem3 = document.createElement('div');
         flexItem3.className = 'flex-item';
@@ -264,6 +263,30 @@ function createListItem() {
                 deleteSVG.data = '/assets/svg/deleteButton.svg';
                 deleteButton.appendChild(deleteSVG);
 
+    // Converts Date Input to "DayOfWeek + Date(13th, 14th etc.) + Month"
+    const day = new Date(itemDeadline.value) + '';
+    const dayArr = day.split(" ");
+    let newDeadline = "";
+    const monthAndDate = `${dayArr[2]} ${dayArr[1]}`;
+    if (dayArr[0] === "Thu") {
+        newDeadline = `Thursday`.concat(` `, monthAndDate);
+    } else if (dayArr[0] === "Sat") {
+        newDeadline = `Saturday`.concat(` `, monthAndDate);
+    } else if (dayArr[0] === "Wed") {
+        newDeadline = `Wednesday`.concat(` `, monthAndDate);
+    } else if (dayArr[0] === "Tue") {
+        newDeadline = `Tuesday`.concat(` `, monthAndDate);
+    } else {
+        newDeadline = `${dayArr[0]}day ${dayArr[2]} ${dayArr[1]}`;
+    }
+
+    dateValue(newDeadline);
+
+    // Updates the list item date to newDeadline value
+    function dateValue(value) {
+        date.textContent = value;
+    }
+
     deleteElements();
     inputClear();
 }
@@ -299,6 +322,7 @@ function invalidFormInput(field) {
 
 }
 
+// Mark Task as Completed
 function complete(task) {
     const taskName = task.parentNode.parentNode;
     taskName.classList.toggle('toggle-completion');
