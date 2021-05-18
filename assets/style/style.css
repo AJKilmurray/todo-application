@@ -106,8 +106,8 @@ body #main #content #todo-header {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   z-index: 5;
-  -webkit-animation: opacity-animation 1.5s ease-in;
-          animation: opacity-animation 1.5s ease-in;
+  -webkit-animation: opacity-animation 0.5s ease-in;
+          animation: opacity-animation 0.5s ease-in;
 }
 
 body #main #content #todo-header #todo-title {
@@ -195,8 +195,8 @@ body #main #content #todo-list #todo-items .list-item {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-animation: opacity-animation 1.5s ease-in;
-          animation: opacity-animation 1.5s ease-in;
+  -webkit-animation: opacity-animation 0.5s ease-in;
+          animation: opacity-animation 0.5s ease-in;
 }
 
 body #main #content #todo-list #todo-items .list-item .flex-item {
@@ -269,8 +269,8 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   border: 3px solid #00FFFB;
-  -webkit-animation: opacity-animation 1.5s ease-in;
-          animation: opacity-animation 1.5s ease-in;
+  -webkit-animation: opacity-animation 0.5s ease-in;
+          animation: opacity-animation 0.5s ease-in;
 }
 
 #extended-form-background #extended-form-container .extended-form-parent .extended-form-content {
@@ -329,6 +329,7 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
 }
 
 .toggle-completion {
-  text-decoration: line-through;
+  -webkit-text-decoration: line-through #00FFFB;
+          text-decoration: line-through #00FFFB;
 }
 /*# sourceMappingURL=style.css.map */
