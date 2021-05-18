@@ -44,7 +44,7 @@ $input-error: #af000026;
 $extended-form-background: #191923a8;
 $extended-form-parent: #20202A;
 
-$opacity-animation: opacity-animation 1.5s ease-in;
+$opacity-animation: opacity-animation 0.5s ease-in;
 
 // Animations 
 
@@ -324,5 +324,5 @@ body {
 }
 
 .toggle-completion {
-    text-decoration: line-through;
+    text-decoration: line-through $aqua;
 }
