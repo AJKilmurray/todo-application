@@ -6,11 +6,11 @@ To add a task to your to-do list, find the input field located to the _left_ of 
 From there, the user will be asked for a deadline (`date` and `time`), which will be displayed on the list item when created. 
 
 The final list item will display 5 individual attributes. 
-1. Task Name
-2. Deadline Date
-3. Countdown Until Deadline
-4. Complete Task Button
-5. Delete Task Button
+`1.` Task Name
+`2.` Deadline Date
+`3.` Countdown Until Deadline
+`4.` Complete Task Button
+`5.` Delete Task Button
 
 For now, these will be the only attributes of each task. In the future, more features like leaving notes will be implemented.
 
@@ -18,3 +18,9 @@ The **red** button will delete all items on the todo list. The user will be conf
 
 ## Design Sketch (Adobe XD)
 ![Sketch](https://i.imgur.com/FYtDnhL.png)
+
+## Technology Stack
+* HTML5
+* Bootstrap (CSS) 
+* SCSS
+* JavaScript
