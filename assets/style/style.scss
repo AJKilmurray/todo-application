@@ -44,8 +44,19 @@ $input-error: #af000026;
 $extended-form-background: #191923a8;
 $extended-form-parent: #20202A;
 
+$opacity-animation: opacity-animation 1.5s ease-in;
+
 // Animations 
 
+@keyframes opacity-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 
 // Style Properties [Global]
@@ -121,6 +132,7 @@ body {
                 padding: 10px;
                 box-shadow: $shadow;
                 z-index: 5;
+                animation: $opacity-animation;
 
                 #todo-title {
                     margin-top: 20px;
@@ -191,6 +203,7 @@ body {
                         justify-content: space-between;
                         align-items: center;
                         flex-wrap: wrap;
+                        animation: $opacity-animation;
 
                         .flex-item {
                             display: flex;
@@ -259,6 +272,7 @@ body {
             padding: 75px 0;
             box-shadow: $shadow;
             border: 3px solid $aqua;
+            animation: $opacity-animation;
 
             // Form
             .extended-form-content {
@@ -307,4 +321,8 @@ body {
             }
         }
     }
+}
+
+.toggle-completion {
+    text-decoration: line-through;
 }
