@@ -278,7 +278,6 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
 }
 
 #extended-form-background #extended-form-container .extended-form-parent .buttons-container {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
