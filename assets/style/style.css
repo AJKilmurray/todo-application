@@ -1,0 +1,307 @@
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #191923;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #20202A;
+  border-radius: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 500px;
+}
+
+.text-highlight {
+  color: #00FFFB;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+button {
+  border: 0;
+  width: 100px;
+  height: 50px;
+  margin-left: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body #main {
+  min-height: 100vh;
+  background-color: #191923;
+  z-index: -5;
+}
+
+body #main #content {
+  padding-top: 20px;
+}
+
+body #main #content #todo-header {
+  background-color: #24242F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 5;
+}
+
+body #main #content #todo-header #todo-title {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+body #main #content #todo-header #todo-title h1 {
+  font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
+  font-size: 52;
+}
+
+body #main #content #todo-header #todo-title p {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  margin-left: 2px;
+  font-size: 23px;
+}
+
+body #main #content #todo-header #todo-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+body #main #content #todo-header #todo-form #todo-input {
+  width: 350px;
+  color: #fff;
+  border-bottom: 1px solid #191923;
+  font-size: 28px;
+}
+
+body #main #content #todo-header #todo-form #todo-add,
+body #main #content #todo-header #todo-form #todo-clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #main #content #todo-header #todo-form #todo-add {
+  background-color: #006E12;
+}
+
+body #main #content #todo-header #todo-form #todo-add:active {
+  background-color: #006e12a8;
+}
+
+body #main #content #todo-header #todo-form #todo-clear {
+  background-color: #AF0000;
+}
+
+body #main #content #todo-header #todo-form #todo-clear:active {
+  background-color: #af0000a8;
+}
+
+body #main #content #todo-list {
+  background-color: #20202A;
+  margin-top: -16px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+body #main #content #todo-list #todo-items .list-item {
+  color: #fff;
+  border-bottom: 1px solid #191923;
+  z-index: 5;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #main #content #todo-list #todo-items .list-item .flex-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #main #content #todo-list #todo-items .list-item .arrow-right-circle {
+  margin-left: 25px;
+}
+
+body #main #content #todo-list #todo-items .list-item p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  display: inline;
+  margin-left: 25px;
+}
+
+body #main #content #todo-list #todo-items .list-item .task {
+  font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif !important;
+}
+
+body #main #content #todo-list #todo-items .list-item .inline-spacing {
+  margin-left: 100px;
+}
+
+body #main #content #todo-list #todo-items .list-item .delete-button,
+body #main #content #todo-list #todo-items .list-item .complete-button {
+  background-color: #191923;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #main #content #todo-list #todo-items .list-item .delete-button {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+#extended-form-background {
+  position: fixed;
+  z-index: 9;
+  height: 100vh;
+  width: 100vw;
+  background-color: #191923a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent {
+  z-index: 10;
+  background-color: #20202A;
+  padding: 75px 0;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border: 3px solid #00FFFB;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content {
+  z-index: 10;
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #name-label,
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #deadline-label {
+  font-size: 28px;
+  font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #todo-item-name,
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #todo-item-deadline {
+  border-bottom: 1px solid #191923;
+  font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #todo-item-time {
+  color: #00FFFB;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .buttons-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .buttons-container #exit-extended-form,
+#extended-form-background #extended-form-container .extended-form-parent .buttons-container #complete-extended-form {
+  background-color: #191923;
+  color: #fff;
+  font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: block;
+}
+
+#extended-form-background #extended-form-container .extended-form-parent .buttons-container #complete-extended-form {
+  margin-left: 25px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg class="clock" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <path id="Path_7" data-name="Path 7"
+        d="M18,33.75A15.75,15.75,0,1,0,2.25,18,15.75,15.75,0,0,0,18,33.75ZM36,18A18,18,0,1,1,18,0,18,18,0,0,1,36,18Z"
+        fill="#00edff" fill-rule="evenodd" />
+    <path id="Path_8" data-name="Path 8"
+        d="M16.875,6.75A1.125,1.125,0,0,1,18,7.875V19.6l7.308,4.176a1.125,1.125,0,0,1-1.116,1.953l-7.875-4.5a1.125,1.125,0,0,1-.567-.977V7.875A1.125,1.125,0,0,1,16.875,6.75Z"
+        fill="#00edff" fill-rule="evenodd" />
+</svg>

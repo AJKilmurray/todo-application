@@ -1,0 +1,311 @@
+// General Colors
+$black: #000;
+$white: #fff;
+$gray: #ccc;
+$lime: #27FF00;
+$green: #19A200;
+$aqua: #00FFFB;
+$purple: #AE00FF;
+$red: #FF0000;
+$orange: #FFA200;
+$darkgray: #585858;
+$blue: #001FFF;
+$yellow: #F7FF00;
+
+// Fonts <main --> fallback>
+$main-fonts: Poppins,
+Montserrat,
+Raleway,
+Roboto;
+$fallback-fonts: Arial,
+Helvetica,
+sans-serif;
+
+// Black Shades <darkest --> lightest>
+$black-shade1: #0C0C0C;
+$black-shade2: #191919;
+$black-shade3: #262626;
+
+// Custom Variables
+
+$background: #191923;
+$text: $white;
+$header: #24242F;
+$todo-list: #20202A;
+$default-font: Montserrat;
+$default-highlight: $aqua;
+$add-button: #006E12;
+$add-button-clicked: #006e12a8;
+$clear-button: #AF0000;
+$clear-button-clicked: #af0000a8;
+$shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+$input-error: #af000026;
+$extended-form-background: #191923a8;
+$extended-form-parent: #20202A;
+
+// Animations 
+
+
+
+// Style Properties [Global]
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #191923;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #20202A;
+    border-radius: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 500px;
+}
+
+.text-highlight {
+    color: $default-highlight;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+::placeholder {
+    color: $text;
+}
+
+button {
+    border: 0;
+    width: 100px;
+    height: 50px;
+    margin-left: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+// Style Properaties [Individual]
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $text;
+    font-family: Montserrat, $fallback-fonts;
+
+    #main {
+        min-height: 100vh;
+        background-color: $background;
+        z-index: -5;
+
+        #content {
+            padding-top: 20px;
+
+            #todo-header {
+                background-color: $header;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                box-shadow: $shadow;
+                z-index: 5;
+
+                #todo-title {
+                    margin-top: 20px;
+                    margin-left: 10px;
+
+                    h1 {
+                        font-family: $main-fonts, $fallback-fonts;
+                        font-size: 52;
+                    }
+
+                    p {
+                        font-family: $default-font, $fallback-fonts;
+                        margin-left: 2px;
+                        font-size: 23px;
+                    }
+                }
+
+                #todo-form {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+
+                    #todo-input {
+                        width: 350px;
+                        color: $white;
+                        border-bottom: 1px solid $background;
+                        font-size: 28px;
+                    }
+
+                    #todo-add,
+                    #todo-clear {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    #todo-add {
+                        background-color: $add-button;
+
+                        &:active {
+                            background-color: $add-button-clicked;
+                        }
+                    }
+
+                    #todo-clear {
+                        background-color: $clear-button;
+
+                        &:active {
+                            background-color: $clear-button-clicked;
+                        }
+                    }
+                }
+            }
+
+            #todo-list {
+                background-color: $todo-list;
+                margin-top: -16px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+                #todo-items {
+
+                    .list-item {
+                        color: $white;
+                        border-bottom: 1px solid $background;
+                        z-index: 5;
+                        padding: 30px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        .flex-item {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .arrow-right-circle {
+                            margin-left: 25px;
+                        }
+
+                        p {
+                            margin: 0;
+                            padding: 0;
+                            font-size: 20px;
+                            font-family: $default-font, $fallback-fonts;
+                            display: inline;
+                            margin-left: 25px;
+                        }
+
+                        .task {
+                            font-family: $main-fonts, $fallback-fonts !important;
+                        }
+
+                        .inline-spacing {
+                            margin-left: 100px;
+                        }
+
+                        .delete-button,
+                        .complete-button {
+                            background-color: $background;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .delete-button {
+                            margin-right: 10px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Extended Form
+
+// Background 
+#extended-form-background {
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100vw;
+    background-color: $extended-form-background;
+    display: flex;
+    align-items: center;
+
+    // Container
+    #extended-form-container {
+
+        // Div after container
+        .extended-form-parent {
+            z-index: 10;
+            background-color: $extended-form-parent;
+            padding: 75px 0;
+            box-shadow: $shadow;
+            border: 3px solid $aqua;
+
+            // Form
+            .extended-form-content {
+                z-index: 10;
+                margin-left: 15px;
+                display: flex;
+                justify-content: space-evenly;
+
+                #name-label,
+                #deadline-label {
+                    font-size: 28px;
+                    font-family: $main-fonts, $fallback-fonts;
+                }
+
+                // Form Inputs
+                #todo-item-name,
+                #todo-item-deadline {
+                    border-bottom: 1px solid $background;
+                    font-family: $main-fonts, $fallback-fonts;
+                    color: $text;
+                }
+
+                #todo-item-time {
+                    color: $aqua;
+                }
+            }
+
+            .buttons-container {
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 40px;
+
+                #exit-extended-form,
+                #complete-extended-form {
+                    background-color: $background;
+                    color: $white;
+                    font-family: $main-fonts, $fallback-fonts;
+                    box-shadow: $shadow;
+                    display: block;
+                }
+
+                #complete-extended-form {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+}

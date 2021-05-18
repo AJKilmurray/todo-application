@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Todo | Head -->
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Page Title -->
+    <title>Todo App | Home</title>
+
+    <!-- Bootstrap (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/style/style.css" type="text/css">
+        
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:wght@100;200;300;400&family=Raleway:wght@100;200;300;400&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- Todo | Body -->
+
+<body>
+
+    <main id="main">
+
+        <section id="content">
+
+            <div class="container-xxl">
+
+                <!-- Todo | Header -->
+
+                <header id="todo-header">
+
+                    <!-- Todo | Title & Version -->
+
+                    <div id="todo-title">
+
+                        <h1><span class="text-highlight">Todo</span> Application</h1>
+
+                        <p>Version alpha-<span class="text-highlight">1.0.0</span></p>
+
+                    </div>
+
+                    <!-- Todo | Form -->
+                    
+                    <form id="todo-form">
+                
+                        <!-- Todo | Input Button -->
+
+                        <input type="text" id="todo-input" placeholder="Add to your todo list" autocomplete="off">
+
+                        <button type="button" id="todo-add">
+
+                            <!-- Todo | Add Button SVG -->
+
+                            <object data="/assets/svg/addItem.svg"></object>
+
+                        </button>
+
+                        <button type="button" id="todo-clear">
+
+                            <!-- Todo | Clear Button SVG -->
+
+                            <object data="/assets/svg/clearAllItems.svg"></object>
+
+                        </button>
+                
+                    </form>
+
+                </header>
+
+                <!-- Todo | Todo List -->
+
+                <div id="todo-list">
+
+                    <!-- Todo | List Parent -->
+
+                    <ul id="todo-items">
+
+                        <!-- ! List Items (Dynamically Added) -->
+
+                        <li id="clone-item" class="list-item">
+
+                            <div class="flex-item">
+
+                                <object data="/assets/svg/arrow.svg" class="arrow-right-circle"></object>
+
+                                <p id="task">Take dog for a walk</p> 
+
+                            </div>
+
+                            <div class="flex-item">
+
+                                <object data="assets/svg/deadline.svg"></object>
+
+                                <p id="deadline">Thursday 2pm</p>
+
+                            </div>
+
+                            <div class="flex-item">
+
+                                <object data="assets/svg/timeLeft.svg"></object>
+
+                                <p id="time-left">1d 3h 10m 5s</p>
+
+                            </div>
+
+                            <div class="flex-item">
+
+                                <button type="button" id="complete-button">
+
+                                    <object data="/assets/svg/completeButton.svg"></object>
+
+                                </button>
+
+                                <button type="button" id="delete-button">
+
+                                    <object data="/assets/svg/deleteButton.svg"></object>
+
+                                </button>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>
