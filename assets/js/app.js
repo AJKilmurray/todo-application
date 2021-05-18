@@ -300,7 +300,8 @@ function invalidFormInput(field) {
 }
 
 function complete(task) {
-
+    const taskName = task.parentNode.parentNode;
+    taskName.classList.toggle('toggle-completion');
 }
 
 // Delete List Item
