@@ -13,7 +13,7 @@ addItemBtn.addEventListener('click', () => { // + Button
     inputFilter();
 });
 
-clearListBtn.addEventListener('click', () => {
+clearListBtn.addEventListener('click', () => { // Remove All Items Button
     clearAllItems();
 });
 
@@ -71,7 +71,7 @@ function extendedForm() {
                 parent.appendChild(newForm);
 
                     const arrowSVG = document.createElement('object'); // Object (arrow.svg)
-                    arrowSVG.data = '/assets/svg/arrow.svg';
+                    arrowSVG.data = 'assets/svg/arrow.svg';
                     newForm.appendChild(arrowSVG);
 
                     const itemNameLabel = document.createElement('label'); // Task Label
@@ -207,7 +207,7 @@ function createListItem() {
 
             const arrowSVG = document.createElement('object');
             arrowSVG.className = 'arrow-right-circle';
-            arrowSVG.data = '/assets/svg/arrow.svg';
+            arrowSVG.data = 'assets/svg/arrow.svg';
             flexItem1.appendChild(arrowSVG);
 
             const name = document.createElement('p');
@@ -220,7 +220,7 @@ function createListItem() {
         newItem.appendChild(flexItem2);
 
             const deadlineSVG = document.createElement('object');
-            deadlineSVG.data = '/assets/svg/deadline.svg';
+            deadlineSVG.data = 'assets/svg/deadline.svg';
             flexItem2.appendChild(deadlineSVG);
 
             const date = document.createElement('p');
@@ -232,7 +232,7 @@ function createListItem() {
         newItem.appendChild(flexItem3);
 
             const timeLeftSVG = document.createElement('object');
-            timeLeftSVG.data = '/assets/svg/timeLeft.svg';
+            timeLeftSVG.data = 'assets/svg/timeLeft.svg';
             flexItem3.appendChild(timeLeftSVG);
 
             const time = document.createElement('p');
@@ -250,7 +250,7 @@ function createListItem() {
             flexItem4.appendChild(completeButton);
 
                 const completeSVG = document.createElement('object');
-                completeSVG.data = '/assets/svg/completeButton.svg';
+                completeSVG.data = 'assets/svg/completeButton.svg';
                 completeButton.appendChild(completeSVG);
 
             const deleteButton = document.createElement('button');
@@ -259,7 +259,7 @@ function createListItem() {
             flexItem4.appendChild(deleteButton);
 
                 const deleteSVG = document.createElement('object');
-                deleteSVG.data = '/assets/svg/deleteButton.svg';
+                deleteSVG.data = 'assets/svg/deleteButton.svg';
                 deleteButton.appendChild(deleteSVG);
 
     // Converts Date Input to "DayOfWeek + Date(13th, 14th etc.) + Month"
