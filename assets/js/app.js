@@ -231,8 +231,8 @@ function createListItem() {
         flexItem3.className = 'flex-item';
         newItem.appendChild(flexItem3);
 
-            const timeLeftSVG = document.createElement('object');
-            timeLeftSVG.data = 'assets/svg/timeLeft.svg';
+            const timeLeftSVG = document.createElement('img');
+            timeLeftSVG.src = 'assets/svg/timeLeft.svg';
             flexItem3.appendChild(timeLeftSVG);
 
             const time = document.createElement('p');
