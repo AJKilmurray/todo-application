@@ -281,25 +281,31 @@ body {
                 display: flex;
                 justify-content: space-evenly;
 
-                #name-label,
-                #deadline-label {
-                    font-size: 28px;
-                    font-family: $main-fonts, $fallback-fonts;
-                }
+                .form-flex-item {
 
-                // Form Inputs
-                #todo-item-name,
-                #todo-item-deadline {
-                    border-bottom: 1px solid $background;
-                    font-family: $main-fonts, $fallback-fonts;
-                    color: $text;
-                }
+                    #name-label,
+                    #date-label,
+                    #time-label {
+                        font-size: 28px;
+                        font-family: $main-fonts, $fallback-fonts;
+                    }
 
-                #todo-item-time {
-                    color: $aqua;
+                    // Form Inputs
+                    #todo-item-name,
+                    #todo-item-date {
+                        border-bottom: 1px solid $background;
+                        font-family: $main-fonts, $fallback-fonts;
+                        color: $text;
+                        margin-left: 10px;
+                    }
+
+                    #todo-item-time {
+                        color: $aqua;
+                        border-bottom: 1px solid $background;
+                        margin-left: 10px;
+                    }
                 }
             }
-
             .buttons-container {
                 display: flex;
                 justify-content: center;
@@ -327,6 +333,20 @@ body {
     text-decoration: line-through $aqua;
 }
 
+.form-flex-item {
+    display: flex;
+    align-items: center;
+
+    .form-svg {
+        padding-right: 5px;
+    }
+}
+
+#fourth-flex-item {
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 1000px) {
     #todo-header {
         flex-direction: column;
@@ -335,6 +355,34 @@ body {
 
     #todo-title {
         text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .extended-form-content {
+        flex-direction: column !important;
+    }
+
+    #todo-item-name,
+    #todo-item-date,
+    #todo-item-time {
+        margin-left: 10px;
+    }
+
+    #todo-item-name {
+        width: 150px;
+    }
+
+    .form-flex-item {
+        padding: 5px 0;
+        align-items: center;
+    }
+
+    .extended-form-parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
@@ -369,6 +417,28 @@ body {
     }
 }
 
+@media (max-width: 346px) {
+    #date-label,
+    #name-label,
+    #time-label {
+        font-size: 20px !important;
+    }
+
+    #todo-item-name {
+        width: 100px;
+        font-size: 13px !important;
+    }
+
+    #todo-item-time {
+        font-size: 13px !important;
+    }
+
+    #todo-item-date {
+        width: 125px;
+        font-size:12px;
+    }
+}
+
 @media (max-width: 320px) {
     #todo-input {
         width: 100% !important;
@@ -378,7 +448,7 @@ body {
     }
 
     #todo-title {
-        margin:0 !important;
+        margin: 0 !important;
     }
 
     #todo-title h1 {
@@ -386,6 +456,6 @@ body {
     }
 
     #todo-title p {
-        font-size: 12px !important; 
+        font-size: 12px !important;
     }
 }
