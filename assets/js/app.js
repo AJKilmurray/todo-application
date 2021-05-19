@@ -70,8 +70,8 @@ function extendedForm() {
                 newForm.className = 'extended-form-content';
                 parent.appendChild(newForm);
 
-                    const arrowSVG = document.createElement('object'); // Object (arrow.svg)
-                    arrowSVG.data = 'assets/svg/arrow.svg';
+                    const arrowSVG = document.createElement('img'); // Image/Icon (arrow.svg)
+                    arrowSVG.src = 'assets/svg/arrow.svg';
                     newForm.appendChild(arrowSVG);
 
                     const itemNameLabel = document.createElement('label'); // Task Label
@@ -89,8 +89,8 @@ function extendedForm() {
                         // Task Pre-Filled Input
                         itemName.value = todoInput.value;
     
-                    const deadlineSVG = document.createElement('object'); // Object (deadline.svg)
-                    deadlineSVG.data = "assets/svg/deadline.svg";
+                    const deadlineSVG = document.createElement('img'); // Image/Icon (deadline.svg)
+                    deadlineSVG.src = "assets/svg/deadline.svg";
                     newForm.appendChild(deadlineSVG);
         
                     const itemDeadlineLabel = document.createElement('label'); // Deadline Label
@@ -205,9 +205,9 @@ function createListItem() {
         flexItem1.className = 'flex-item';
         newItem.appendChild(flexItem1);
 
-            const arrowSVG = document.createElement('object');
+            const arrowSVG = document.createElement('img');
             arrowSVG.className = 'arrow-right-circle';
-            arrowSVG.data = 'assets/svg/arrow.svg';
+            arrowSVG.src = 'assets/svg/arrow.svg';
             flexItem1.appendChild(arrowSVG);
 
             const name = document.createElement('p');
@@ -219,8 +219,8 @@ function createListItem() {
         flexItem2.className = 'flex-item';
         newItem.appendChild(flexItem2);
 
-            const deadlineSVG = document.createElement('object');
-            deadlineSVG.data = 'assets/svg/deadline.svg';
+            const deadlineSVG = document.createElement('img');
+            deadlineSVG.src = 'assets/svg/deadline.svg';
             flexItem2.appendChild(deadlineSVG);
 
             const date = document.createElement('p');
@@ -249,8 +249,8 @@ function createListItem() {
             completeButton.setAttribute("onclick", "complete(this);");
             flexItem4.appendChild(completeButton);
 
-                const completeSVG = document.createElement('object');
-                completeSVG.data = 'assets/svg/completeButton.svg';
+                const completeSVG = document.createElement('img');
+                completeSVG.src = 'assets/svg/completeButton.svg';
                 completeButton.appendChild(completeSVG);
 
             const deleteButton = document.createElement('button');
@@ -258,8 +258,8 @@ function createListItem() {
             deleteButton.setAttribute("onclick", "remove(this);");
             flexItem4.appendChild(deleteButton);
 
-                const deleteSVG = document.createElement('object');
-                deleteSVG.data = 'assets/svg/deleteButton.svg';
+                const deleteSVG = document.createElement('img');
+                deleteSVG.src = 'assets/svg/deleteButton.svg';
                 deleteButton.appendChild(deleteSVG);
 
     // Converts Date Input to "DayOfWeek + Date(13th, 14th etc.) + Month"
