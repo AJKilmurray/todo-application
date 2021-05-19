@@ -344,9 +344,13 @@ body {
         font-size: 18px !important;
     }
 
+    #todo-title p {
+        font-size: 15px !important;
+    }
+
     #todo-add,
     #todo-clear {
-        width: 50px;
+        width: 90px;
         height: 40px;
     }
 }
