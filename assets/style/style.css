@@ -140,7 +140,7 @@ body #main #content #todo-header #todo-form #todo-input {
   width: 350px;
   color: #fff;
   border-bottom: 1px solid #191923;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 body #main #content #todo-header #todo-form #todo-add,
@@ -215,7 +215,7 @@ body #main #content #todo-list #todo-items .list-item .arrow-right-circle {
 body #main #content #todo-list #todo-items .list-item p {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   display: inline;
   margin-left: 25px;
@@ -331,5 +331,39 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
 .toggle-completion {
   -webkit-text-decoration: line-through #00FFFB;
           text-decoration: line-through #00FFFB;
+}
+
+@media (max-width: 1000px) {
+  #todo-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #todo-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 596px) {
+  #todo-input {
+    width: 200px !important;
+    font-size: 18px !important;
+  }
+  #todo-add,
+  #todo-clear {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 345px) {
+  #todo-input {
+    width: 175px !important;
+    font-size: 15px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
