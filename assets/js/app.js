@@ -9,6 +9,13 @@ const clearListBtn = document.getElementById('todo-clear');
 // List Parent Element
 const listParent = document.getElementById('todo-items');
 
+todoInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        inputFilter();
+    }
+});
+
 addItemBtn.addEventListener('click', () => { // + Button
     inputFilter();
 });
@@ -69,60 +76,97 @@ function extendedForm() {
                 newForm.className = 'extended-form-content';
                 parent.appendChild(newForm);
 
-                    const arrowSVG = document.createElement('img'); // Image/Icon (arrow.svg)
-                    arrowSVG.src = 'assets/svg/arrow.svg';
-                    newForm.appendChild(arrowSVG);
+                    const formFlexItem1 = document.createElement('div');
+                    formFlexItem1.className = 'form-flex-item';
+                    newForm.appendChild(formFlexItem1);
 
-                    const itemNameLabel = document.createElement('label'); // Task Label
-                    itemNameLabel.textContent = 'Task:';
-                    itemNameLabel.htmlFor = 'todo-item-name';
-                    itemNameLabel.id = 'name-label';
-                    newForm.appendChild(itemNameLabel);
+                        const arrowSVG = document.createElement('img'); // Image/Icon (arrow.svg)
+                        arrowSVG.className = 'form-svg';
+                        arrowSVG.style.width = '36px';
+                        arrowSVG.style.height = '36px';
+                        arrowSVG.src = 'assets/svg/arrow.svg';
+                        formFlexItem1.appendChild(arrowSVG);
 
-                        const itemName = document.createElement('input'); // Task Name Input
-                        itemName.type = 'text';
-                        itemName.autocomplete = 'off';
-                        itemName.id = 'todo-item-name';
-                        newForm.appendChild(itemName);
+                        const itemNameLabel = document.createElement('label'); // Task Label
+                        itemNameLabel.textContent = 'Task:';
+                        itemNameLabel.htmlFor = 'todo-item-name';
+                        itemNameLabel.id = 'name-label';
+                        formFlexItem1.appendChild(itemNameLabel);
+
+                            const itemName = document.createElement('input'); // Task Name Input
+                            itemName.type = 'text';
+                            itemName.autocomplete = 'off';
+                            itemName.id = 'todo-item-name';
+                            formFlexItem1.appendChild(itemName);
 
                         // Task Pre-Filled Input
                         itemName.value = todoInput.value;
     
-                    const deadlineSVG = document.createElement('img'); // Image/Icon (deadline.svg)
-                    deadlineSVG.src = "assets/svg/deadline.svg";
-                    newForm.appendChild(deadlineSVG);
-        
-                    const itemDeadlineLabel = document.createElement('label'); // Deadline Label
-                    itemDeadlineLabel.textContent = 'Deadline:';
-                    itemDeadlineLabel.htmlFor = 'todo-item-deadline';
-                    itemDeadlineLabel.id = 'deadline-label';
-                    newForm.appendChild(itemDeadlineLabel);
 
-                        const itemDeadline = document.createElement('input'); // Deadline Input
-                        itemDeadline.type = 'date';
-                        itemDeadline.id = 'todo-item-deadline';
-                        newForm.appendChild(itemDeadline);
+                    const formFlexItem2 = document.createElement('div');
+                    formFlexItem2.className = 'form-flex-item';
+                    newForm.appendChild(formFlexItem2);
 
-                    const itemTimeOfDay = document.createElement('input'); // Time Input
-                    itemTimeOfDay.type = 'time';
-                    itemTimeOfDay.id = 'todo-item-time';
-                    newForm.appendChild(itemTimeOfDay);
+                        const deadlineSVG = document.createElement('img'); // Image/Icon (deadline.svg)
+                        deadlineSVG.src = "assets/svg/deadline.svg";
+                        deadlineSVG.className = 'form-svg';
+                        deadlineSVG.style.width = '36px';
+                        deadlineSVG.style.height = '36px';
+                        formFlexItem2.appendChild(deadlineSVG);
+            
+                        const itemDateLabel = document.createElement('label'); // Date Label
+                        itemDateLabel.textContent = 'Date:';
+                        itemDateLabel.htmlFor = 'todo-item-deadline';
+                        itemDateLabel.id = 'date-label';
+                        formFlexItem2.appendChild(itemDateLabel);
 
-            const buttonsDiv = document.createElement('div'); // Buttons Container
-            buttonsDiv.className = 'buttons-container';
-            parent.appendChild(buttonsDiv);
+                            const itemDate = document.createElement('input'); // Date Input
+                            itemDate.type = 'date';
+                            itemDate.id = 'todo-item-date';
+                            formFlexItem2.appendChild(itemDate);
 
-                const exitButton = document.createElement('button'); // Exit Form Button
-                exitButton.textContent = 'Go Back';
-                exitButton.type = 'button';
-                exitButton.id = 'exit-extended-form';
-                buttonsDiv.appendChild(exitButton);
+                    const formFlexItem3 = document.createElement('div');
+                    formFlexItem3.className = 'form-flex-item';
+                    newForm.appendChild(formFlexItem3);
 
-                const completeForm = document.createElement('button'); // Complete Form Button
-                completeForm.textContent = 'Create';
-                completeForm.type = 'button';
-                completeForm.id = 'complete-extended-form';
-                buttonsDiv.appendChild(completeForm);
+                        const timeSVG = document.createElement('img'); // Ticking Down Clock (Time) SVG (Image)
+                        timeSVG.className = 'form-svg';
+                        timeSVG.src = 'assets/svg/timeLeft.svg';
+                        timeSVG.style.height = '36px';
+                        timeSVG.style.width = '36px';
+                        formFlexItem3.appendChild(timeSVG);
+
+                        const itemTimeLabel = document.createElement('label');
+                        itemTimeLabel.textContent = 'Time:';
+                        itemTimeLabel.id = 'time-label';
+                        itemTimeLabel.htmlFor = 'todo-item-time';
+                        formFlexItem3.appendChild(itemTimeLabel);
+
+                        const itemTime = document.createElement('input'); // Time Input
+                        itemTime.type = 'time';
+                        itemTime.id = 'todo-item-time';
+                        formFlexItem3.appendChild(itemTime);
+
+            const formFlexItem4 = document.createElement('div');
+            formFlexItem4.className = 'form-flex-item';
+            formFlexItem4.id = 'fourth-flex-item'
+            parent.appendChild(formFlexItem4);
+
+                const buttonsDiv = document.createElement('div'); // Buttons Container
+                buttonsDiv.className = 'buttons-container';
+                formFlexItem4.appendChild(buttonsDiv);
+
+                    const exitButton = document.createElement('button'); // Exit Form Button
+                    exitButton.textContent = 'Go Back';
+                    exitButton.type = 'button';
+                    exitButton.id = 'exit-extended-form';
+                    buttonsDiv.appendChild(exitButton);
+
+                    const completeForm = document.createElement('button'); // Complete Form Button
+                    completeForm.textContent = 'Create';
+                    completeForm.type = 'button';
+                    completeForm.id = 'complete-extended-form';
+                    buttonsDiv.appendChild(completeForm);
 
     exitButton.addEventListener('click', () => {
         deleteElements(); // Deletes (Exits) Extended Form
@@ -152,14 +196,14 @@ function deleteElements() {
 function checkFormValues() {
 
     const itemName = document.getElementById('todo-item-name');
-    const itemDeadline = document.getElementById('todo-item-deadline');
+    const itemDate = document.getElementById('todo-item-date');
     const timeOfDay = document.getElementById('todo-item-time');
 
     if (itemName.value.length === 0 || itemName.value.length > 25) { // If Empty or Too Long Input
         invalidTaskName();
     } 
 
-    if (!itemDeadline.value) { // If Empty
+    if (!itemDate.value) { // If Empty
         invalidDeadline();
     }
 
@@ -167,7 +211,7 @@ function checkFormValues() {
         invalidTime();
     }
 
-    if (itemName.value.length > 0 && itemDeadline.value.length > 0 && timeOfDay.value.length > 0) {
+    if (itemName.value.length > 0 && itemDate.value.length > 0 && timeOfDay.value.length > 0) {
         createListItem();
     }
 }
@@ -179,8 +223,8 @@ function invalidTaskName() {
 
 // Invalid Deadline [input type="date"] (Extended Form)
 function invalidDeadline() {
-    const itemDeadline = document.getElementById('todo-item-deadline');
-    invalidFormInput(itemDeadline);
+    const itemDate = document.getElementById('todo-item-date');
+    invalidFormInput(itemDate);
 }
 
 // Invalid Time [input type="time"] (Extended Form)
@@ -193,7 +237,7 @@ function invalidTime() {
 function createListItem() {
 
     const itemName = document.getElementById('todo-item-name');
-    const itemDeadline = document.getElementById('todo-item-deadline');
+    const itemDate = document.getElementById('todo-item-date');
     const timeOfDay = document.getElementById('todo-item-time');
 
     const newItem = document.createElement('li'); // List Item
@@ -262,7 +306,7 @@ function createListItem() {
                 deleteButton.appendChild(deleteSVG);
 
     // Converts Date Input to "DayOfWeek + Date(13th, 14th etc.) + Month"
-    const day = new Date(itemDeadline.value) + '';
+    const day = new Date(itemDate.value) + '';
     const dayArr = day.split(" ");
     let newDeadline = "";
     const monthAndDate = `${dayArr[2]} ${dayArr[1]}`;
@@ -292,7 +336,7 @@ function createListItem() {
 // Unexpected / Error todoInput
 function unexpectedInput() {
     console.error("Unexpected Error with todoInput.value");
-    console.error(`todoInput.value had the value of --> "${todoInput.value}"`)
+    console.error(`todoInput.value had the value of --> "${todoInput.value}"`);
 }
 
 // Clears todoInput (QoL)
