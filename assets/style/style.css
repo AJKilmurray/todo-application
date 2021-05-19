@@ -284,21 +284,25 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
           justify-content: space-evenly;
 }
 
-#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #name-label,
-#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #deadline-label {
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content .form-flex-item #name-label,
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content .form-flex-item #date-label,
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content .form-flex-item #time-label {
   font-size: 28px;
   font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
 }
 
-#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #todo-item-name,
-#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #todo-item-deadline {
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content .form-flex-item #todo-item-name,
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content .form-flex-item #todo-item-date {
   border-bottom: 1px solid #191923;
   font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
   color: #fff;
+  margin-left: 10px;
 }
 
-#extended-form-background #extended-form-container .extended-form-parent .extended-form-content #todo-item-time {
+#extended-form-background #extended-form-container .extended-form-parent .extended-form-content .form-flex-item #todo-item-time {
   color: #00FFFB;
+  border-bottom: 1px solid #191923;
+  margin-left: 10px;
 }
 
 #extended-form-background #extended-form-container .extended-form-parent .buttons-container {
@@ -333,6 +337,28 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
           text-decoration: line-through #00FFFB;
 }
 
+.form-flex-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-flex-item .form-svg {
+  padding-right: 5px;
+}
+
+#fourth-flex-item {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 1000px) {
   #todo-header {
     -webkit-box-orient: vertical;
@@ -345,6 +371,44 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
   }
   #todo-title {
     text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .extended-form-content {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #todo-item-name,
+  #todo-item-date,
+  #todo-item-time {
+    margin-left: 10px;
+  }
+  #todo-item-name {
+    width: 150px;
+  }
+  .form-flex-item {
+    padding: 5px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .extended-form-parent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -380,6 +444,25 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
+  }
+}
+
+@media (max-width: 346px) {
+  #date-label,
+  #name-label,
+  #time-label {
+    font-size: 20px !important;
+  }
+  #todo-item-name {
+    width: 100px;
+    font-size: 13px !important;
+  }
+  #todo-item-time {
+    font-size: 13px !important;
+  }
+  #todo-item-date {
+    width: 125px;
+    font-size: 12px;
   }
 }
 
