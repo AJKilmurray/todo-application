@@ -117,7 +117,7 @@ body #main #content #todo-header #todo-title {
 
 body #main #content #todo-header #todo-title h1 {
   font-family: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
-  font-size: 52;
+  font-size: 2em;
 }
 
 body #main #content #todo-header #todo-title p {
@@ -380,6 +380,24 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #todo-input {
+    width: 100% !important;
+    font-size: 11px !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #todo-title {
+    margin: 0 !important;
+  }
+  #todo-title h1 {
+    font-size: 24px !important;
+  }
+  #todo-title p {
+    font-size: 12px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
