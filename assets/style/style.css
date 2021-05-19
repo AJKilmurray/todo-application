@@ -353,9 +353,12 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
     width: 200px !important;
     font-size: 18px !important;
   }
+  #todo-title p {
+    font-size: 15px !important;
+  }
   #todo-add,
   #todo-clear {
-    width: 50px;
+    width: 90px;
     height: 40px;
   }
 }
