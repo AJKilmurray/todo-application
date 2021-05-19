@@ -156,7 +156,7 @@ function checkFormValues() {
     const itemDeadline = document.getElementById('todo-item-deadline');
     const timeOfDay = document.getElementById('todo-item-time');
 
-    if (itemName.value.length === 0 || itemName.value.length > 50) { // If Empty or Too Long Input
+    if (itemName.value.length === 0 || itemName.value.length > 25) { // If Empty or Too Long Input
         invalidTaskName();
     } 
 
@@ -213,7 +213,6 @@ function createListItem() {
             const name = document.createElement('p');
             name.textContent = itemName.value;
             name.className = 'task';
-            name.style.width = '150px';
             flexItem1.appendChild(name);
 
         const flexItem2 = document.createElement('div');
@@ -332,6 +331,3 @@ function complete(task) {
 function remove(element) {
     element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
 }
-
-
-
