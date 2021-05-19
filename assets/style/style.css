@@ -363,7 +363,7 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
   }
 }
 
-@media (max-width: 345px) {
+@media (max-width: 426px) {
   #todo-input {
     width: 175px !important;
     font-size: 15px !important;
