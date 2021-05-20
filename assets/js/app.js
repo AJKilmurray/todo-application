@@ -447,6 +447,14 @@ function invalidFormInput(field) {
 function complete(task) {
     const taskName = task.parentNode.parentNode;
     taskName.classList.toggle('toggle-completion');
+
+    if (taskName.classList.length === 2) {
+        task.style.background = '#006E12';
+    } else if (taskName.classList.length === 1) {
+        task.style.background = '#191923';
+    } else {
+        console.error('Unexpected length / items in array!');
+    }
 }
 
 // Delete List Item
