@@ -27,10 +27,11 @@ clearListBtn.addEventListener('click', () => { // Remove All Items Button
 // "todoInput" Input Value Filter
 function inputFilter() {
 
-    if (todoInput.value.length === 0 || todoInput.value.length > 50) { // If Empty or Too Long Input
+    if (todoInput.value.length === 0) { // If Empty or Too Long Input
         invalidInput();
-        inputClear();
-    } else if (todoInput.value.length > 0) { // If Valid Input
+    } else if (todoInput.value.length > 25) {
+        invalidInput();
+    } else if (todoInput.value.length > 0 || todoInput.value.length <= 25) { // If Valid Input
         validInput();
     } else { // If Error
         unexpectedInput();
@@ -211,13 +212,14 @@ function checkFormValues() {
         invalidTime();
     }
 
-    if (itemName.value.length > 0 && itemDate.value.length > 0 && timeOfDay.value.length > 0) {
+    if (itemName.value.length > 0 && itemName.value.length <= 25 && itemDate.value.length > 0 && timeOfDay.value.length > 0) {
         createListItem();
     }
 }
 
 // Invalid Task Name (Extended Form)
 function invalidTaskName() {
+    const itemName = document.getElementById('todo-item-name');
     invalidFormInput(itemName);
 }
 
@@ -244,66 +246,70 @@ function createListItem() {
     newItem.className = 'list-item';
     listParent.appendChild(newItem);
 
-        const flexItem1 = document.createElement('div'); // Flex Container 1
-        flexItem1.className = 'flex-item';
-        newItem.appendChild(flexItem1);
+        const itemContainer = document.createElement('div');
+        itemContainer.className = 'item-container';
+        newItem.appendChild(itemContainer);
 
-            const arrowSVG = document.createElement('img'); // Arrow (Task) SVG (Image)
-            arrowSVG.className = 'arrow-right-circle';
-            arrowSVG.src = 'assets/svg/arrow.svg';
-            flexItem1.appendChild(arrowSVG);
+            const flexItem1 = document.createElement('div'); // Flex Container 1
+            flexItem1.className = 'flex-item';
+            itemContainer.appendChild(flexItem1);
 
-            const name = document.createElement('p'); // Task Name
-            name.textContent = itemName.value;
-            name.className = 'task';
-            flexItem1.appendChild(name);
+                const arrowSVG = document.createElement('img'); // Arrow (Task) SVG (Image)
+                arrowSVG.className = 'arrow-right-circle';
+                arrowSVG.src = 'assets/svg/arrow.svg';
+                flexItem1.appendChild(arrowSVG);
 
-        const flexItem2 = document.createElement('div'); // Flex Container 2
-        flexItem2.className = 'flex-item';
-        newItem.appendChild(flexItem2);
+                const name = document.createElement('p'); // Task Name
+                name.textContent = itemName.value;
+                name.className = 'task';
+                flexItem1.appendChild(name);
 
-            const deadlineSVG = document.createElement('img'); // Clock (Deadline) SVG (Image)
-            deadlineSVG.src = 'assets/svg/deadline.svg';
-            flexItem2.appendChild(deadlineSVG);
+            const flexItem2 = document.createElement('div'); // Flex Container 2
+            flexItem2.className = 'flex-item';
+            itemContainer.appendChild(flexItem2);
 
-            const date = document.createElement('p'); // Date
-            date.className = 'deadline';
-            flexItem2.appendChild(date);  
+                const deadlineSVG = document.createElement('img'); // Clock (Deadline) SVG (Image)
+                deadlineSVG.src = 'assets/svg/deadline.svg';
+                flexItem2.appendChild(deadlineSVG);
 
-        const flexItem3 = document.createElement('div'); // Flex Container 3
-        flexItem3.className = 'flex-item';
-        newItem.appendChild(flexItem3);
+                const date = document.createElement('p'); // Date
+                date.className = 'deadline';
+                flexItem2.appendChild(date);  
 
-            const timeLeftSVG = document.createElement('img'); // Ticking Down Clock (Time) SVG (Image)
-            timeLeftSVG.src = 'assets/svg/timeLeft.svg';
-            flexItem3.appendChild(timeLeftSVG);
+            const flexItem3 = document.createElement('div'); // Flex Container 3
+            flexItem3.className = 'flex-item';
+            itemContainer.appendChild(flexItem3);
 
-            const time = document.createElement('p'); // Time
-            time.className = 'time-left';
-            time.textContent = timeOfDay.value;
-            flexItem3.appendChild(time);
+                const timeLeftSVG = document.createElement('img'); // Ticking Down Clock (Time) SVG (Image)
+                timeLeftSVG.src = 'assets/svg/timeLeft.svg';
+                flexItem3.appendChild(timeLeftSVG);
 
-        const flexItem4 = document.createElement('div'); // Flex Container 4
-        flexItem4.className = 'flex-item';
-        newItem.appendChild(flexItem4);
+                const time = document.createElement('p'); // Time
+                time.className = 'time-left';
+                time.textContent = timeOfDay.value;
+                flexItem3.appendChild(time);
 
-            const completeButton = document.createElement('button'); // Complete Task Button
-            completeButton.className = 'complete-button';
-            completeButton.setAttribute("onclick", "complete(this);");
-            flexItem4.appendChild(completeButton);
+            const flexItem4 = document.createElement('div'); // Flex Container 4
+            flexItem4.className = 'flex-item';
+            itemContainer.appendChild(flexItem4);
 
-                const completeSVG = document.createElement('img'); // Complete Task SVG (Image)
-                completeSVG.src = 'assets/svg/completeButton.svg';
-                completeButton.appendChild(completeSVG);
+                const completeButton = document.createElement('button'); // Complete Task Button
+                completeButton.className = 'complete-button';
+                completeButton.setAttribute("onclick", "complete(this);");
+                flexItem4.appendChild(completeButton);
 
-            const deleteButton = document.createElement('button'); // Delete Task Button
-            deleteButton.className = 'delete-button';
-            deleteButton.setAttribute("onclick", "remove(this);");
-            flexItem4.appendChild(deleteButton);
+                    const completeSVG = document.createElement('img'); // Complete Task SVG (Image)
+                    completeSVG.src = 'assets/svg/completeButton.svg';
+                    completeButton.appendChild(completeSVG);
 
-                const deleteSVG = document.createElement('img'); // Delete Task SVG (Image)
-                deleteSVG.src = 'assets/svg/deleteButton.svg';
-                deleteButton.appendChild(deleteSVG);
+                const deleteButton = document.createElement('button'); // Delete Task Button
+                deleteButton.className = 'delete-button';
+                deleteButton.setAttribute("onclick", "remove(this);");
+                flexItem4.appendChild(deleteButton);
+
+                    const deleteSVG = document.createElement('img'); // Delete Task SVG (Image)
+                    deleteSVG.src = 'assets/svg/deleteButton.svg';
+                    deleteButton.appendChild(deleteSVG);
 
     // Converts Date Input to "DayOfWeek + Date(13th, 14th etc.) + Month"
     const day = new Date(itemDate.value) + '';
@@ -445,5 +451,5 @@ function complete(task) {
 
 // Delete List Item
 function remove(element) {
-    element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
+    element.parentNode.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode.parentNode);
 }
