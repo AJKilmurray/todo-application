@@ -25,3 +25,12 @@ The **red** button will delete all items on the todo list. The user will be conf
 * Bootstrap 
 * SCSS
 * JavaScript
+
+## How to run this application
+This application does not need any dependencies, or packages. Just download the files in a folder and you can open up `index.html`. If you would like to see the project without having to download the files, you can head on over [here](https://ajkilmurray.github.io/todo-application). If you find any issues or bugs, please feel free to open an issue, or even a pull request. 
+
+## Responsive Design
+The application will remain functional and operational on all device screens. For the best experiences, desktop/laptop will have the best results. More optimal changes will be made in the future, for specific devices. However, for now each device has its own responsive layout.
+
+## What I've learned from this project
+This is my "biggest" project so far, in terms of javascript. I've managed to both expand upon and learn new things. It's also been a great experience getting even more familiar with CSS, as there are so many different ways to do things, and it just comes down to personal preference. The same can be said about Javascript, but there are generally "best practices" that you conclude to using upon research and trial and error. What i've specifically been able to learn is the following:
