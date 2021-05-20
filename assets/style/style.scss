@@ -306,6 +306,7 @@ body {
                     }
                 }
             }
+
             .buttons-container {
                 display: flex;
                 justify-content: center;
@@ -339,6 +340,82 @@ body {
 
     .form-svg {
         padding-right: 5px;
+    }
+}
+
+// Style Clear Items Confirmation!
+
+#confirm-background {
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100vw;
+    background-color: $extended-form-background;
+    display: flex;
+    align-items: center;
+
+    #confirm-container {
+
+        #confirm-content {
+            z-index: 10;
+            background-color: $extended-form-parent;
+            padding: 75px 0;
+            box-shadow: $shadow;
+            border: 3px solid $aqua;
+            animation: $opacity-animation;
+
+            #confirm-title,
+            #confirm-text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #confirm-title {
+                font: 28px $main-fonts, $fallback-fonts;
+                color: $aqua;
+            }
+
+            #confirm-text {
+                font: 16px $default-font, $fallback-fonts;
+            }
+
+            #confirm-buttons-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 40px;
+
+                #option-no,
+                #option-yes {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $text;
+                    font: $main-fonts, $fallback-fonts;
+                }
+
+                #option-no {
+                    background: $clear-button;
+
+                    &:active {
+                        background: $clear-button-clicked;
+                    }
+                }
+
+                #option-yes {
+                    background: $add-button;
+                    margin-left: 10px;
+
+                    &:active {
+                        background: $add-button-clicked;
+                    }
+                }
+
+            }
+        }
+
     }
 }
 
@@ -418,6 +495,7 @@ body {
 }
 
 @media (max-width: 346px) {
+
     #date-label,
     #name-label,
     #time-label {
@@ -435,7 +513,7 @@ body {
 
     #todo-item-date {
         width: 125px;
-        font-size:12px;
+        font-size: 12px;
     }
 }
 
@@ -457,5 +535,13 @@ body {
 
     #todo-title p {
         font-size: 12px !important;
+    }
+
+    #confirm-content {
+        border: 1px solid $aqua !important;
+    }
+
+    #option-yes {
+        margin-right: 5px;
     }
 }
