@@ -33,4 +33,38 @@ This application does not need any dependencies, or packages. Just download the 
 The application will remain functional and operational on all device screens. For the best experiences, desktop/laptop will have the best results. More optimal changes will be made in the future, for specific devices. However, for now each device has its own responsive layout.
 
 ## What I've learned from this project
-This is my "biggest" project so far, in terms of javascript. I've managed to both expand upon and learn new things. It's also been a great experience getting even more familiar with CSS, as there are so many different ways to do things, and it just comes down to personal preference. The same can be said about Javascript, but there are generally "best practices" that you conclude to using upon research and trial and error. What i've specifically been able to learn is the following:
+This is my _"biggest"_ project so far, in terms of Javascript (~500 lines). I've managed to both expand upon and learn new things. It's also been a great experience getting even more familiar with CSS, as there are so many different ways to do things, and it just comes down to personal preference. The same can be said about Javascript, but there are generally "best practices" that you conclude to using upon research and trial and error. What i've specifically been able to learn is the following:
+
+### Javascript
+* Using function parameters with HTML elements
+* Using event listeners on more than just clicks. Specific user inputs.
+* Manipulation of styles.
+* Working with arrays.
+* Date constructors. (Very interesting stff, will be learning more about this.)
+* Dynamically adding, removing and manipulating HTML elements.
+* Stronger understanding of arrow functions & functional programming.
+* Seperation of functions. Spread out, purpose dedicated functions are much better than clustering functions with a dozen different purposes.
+* Using some methods. Most memorable are .split() & .concat. Very useful. I also experimented with a number of array methods. Not for the first time, but to understand them more in depth. I feel very comfortable with string & array methods. Would like to learn more about objects.
+
+### SCSS (& CSS)
+* How effective using variables is compared to set values. Saves time and keeps values stored with ease of access.
+* Experimented with some advanced animations, decided to stick with some basic opacity animations, to learn more about it later.
+* First proper time using !important. Very useful for overriding values when needing to adjust them for responsiveness.
+* The ability to read & work with SCSS is much easier than CSS. Mainly due to the indentation feature.
+* I now understand mixin's, but they were not needed for a project like this. I will definitely be using them in the future, for larger projects for sure.
+* Working with media queries. Spent some hours on just writing responsive values.
+
+### HTML 
+* Found out about some new elements and element types. Some memorable ones were `<object>` & `<svg>`. 
+* Better understanding of parenting elements better for style/design. As well as when dynamically adding elements. Adding too many, or too little are both bad. Too many = too much code, too little = limited elements to work with.
+* How useful input fields are. Forms in general are extremely useful, I'll definitely be diving deeper into the usage of forms, especially when using javascript, and possibly even back-end languages when I start learning them shortly.
+* 
+
+### SVG's
+* How amazing SVG's truly are. I had heard about the customisation and flexibility with SVG's, but only started to get experimental with them on this project. I will be using SVG's for all future projects.
+* How to change the properties of SVG files. (It's extremely simple)
+* Load times. SVG's are super fast.
+* Lossless quality.
+
+### Bootstrap
+* I actually hardly used bootstrap during this project, except for one purpose. I used the container classes, just to get a better understanding of the different between each of them. Prior to this project, I didn't entirely understand the difference between each different class. However, I now have a strong understanding, especially after looking through the bootstrap CSS code locally. The fact that I purely used vanilla features for HTML, SCSS/CSS, JS, is what made this such a great learning opportunity. Learning the fundamentals and having an advanced understanding of vanilla features is extremely important before relying on libraries/frameworks.
