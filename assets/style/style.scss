@@ -98,6 +98,7 @@ button {
     width: 100px;
     height: 50px;
     margin-left: 5px;
+    box-shadow: $shadow;
 }
 
 ul {
@@ -191,7 +192,7 @@ body {
             #todo-list {
                 background-color: $todo-list;
                 margin-top: -16px;
-                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                box-shadow: $shadow;
 
                 #todo-items {
 
@@ -325,7 +326,6 @@ body {
                     background-color: $background;
                     color: $white;
                     font-family: $main-fonts, $fallback-fonts;
-                    box-shadow: $shadow;
                     display: block;
                 }
 
@@ -445,7 +445,7 @@ body {
     .list-item {
         display: flex;
         justify-content: center;
-        padding: 10px 0px !important;  
+        padding: 10px 0px !important;
 
         p {
             margin-left: 10px !important;
@@ -578,5 +578,33 @@ body {
 
     #option-yes {
         margin-right: 5px;
+    }
+}
+
+@media (max-width: 280px) {
+    .delete-button,
+    .complete-button,
+    #exit-extended-form,
+    #complete-extended-form {
+        width: 80px !important;
+        height: 40px !important;
+        font-size: 14px !important;
+    }
+
+    #todo-item-date {
+        width: 118px;
+        font-size: 11px;
+    }
+
+    #name-label,
+    #date-label,
+    #time-label {
+        font-size: 16px !important;
+    }
+
+    #todo-item-date,
+    #todo-item-name,
+    #todo-item-time {
+        margin-left: 3px !important;
     }
 }
