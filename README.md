@@ -9,13 +9,13 @@ The final list item will display **5** individual attributes.
 
 1. Task Name
 2. Deadline (Date)
-3. Deadline (Time)
+3. Deadline (Time of day)
 4. Complete Task Button
 5. Delete Task Button
 
 For _now_, these will be the only attributes of each task. In the future, more features like leaving notes will be implemented.
 
-The **red** button will delete all items on the todo list. The user will be confronted with a confirmation upon clicking the button, to ensure the user does not accidentally lose all items on their todo list from a miss-click.
+The **red** button will delete all items on the todo list. The user will be confronted with a confirmation upon clicking the button, to ensure the user does not accidentally lose all items on their todo list from a miss-click. The `No` option, will return to the home screen. The `Yes` option will delete all list items.
 
 ## Design Sketch (Adobe XD)
 ![Sketch](https://i.imgur.com/FYtDnhL.png)
