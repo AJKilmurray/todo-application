@@ -77,7 +77,7 @@ function extendedForm() {
                 newForm.className = 'extended-form-content';
                 parent.appendChild(newForm);
 
-                    const formFlexItem1 = document.createElement('div');
+                    const formFlexItem1 = document.createElement('div'); // Flex Item 1
                     formFlexItem1.className = 'form-flex-item';
                     newForm.appendChild(formFlexItem1);
 
@@ -104,7 +104,7 @@ function extendedForm() {
                         itemName.value = todoInput.value;
     
 
-                    const formFlexItem2 = document.createElement('div');
+                    const formFlexItem2 = document.createElement('div'); // Flex Item 2
                     formFlexItem2.className = 'form-flex-item';
                     newForm.appendChild(formFlexItem2);
 
@@ -123,10 +123,11 @@ function extendedForm() {
 
                             const itemDate = document.createElement('input'); // Date Input
                             itemDate.type = 'date';
+                            itemDate.setAttribute('max', '2021-12-31');
                             itemDate.id = 'todo-item-date';
                             formFlexItem2.appendChild(itemDate);
 
-                    const formFlexItem3 = document.createElement('div');
+                    const formFlexItem3 = document.createElement('div'); // Flex Item 3
                     formFlexItem3.className = 'form-flex-item';
                     newForm.appendChild(formFlexItem3);
 
@@ -137,7 +138,8 @@ function extendedForm() {
                         timeSVG.style.width = '36px';
                         formFlexItem3.appendChild(timeSVG);
 
-                        const itemTimeLabel = document.createElement('label');
+                        const itemTimeLabel = document.createElement('label'); // Time Label
+                    
                         itemTimeLabel.textContent = 'Time:';
                         itemTimeLabel.id = 'time-label';
                         itemTimeLabel.htmlFor = 'todo-item-time';
@@ -148,7 +150,7 @@ function extendedForm() {
                         itemTime.id = 'todo-item-time';
                         formFlexItem3.appendChild(itemTime);
 
-            const formFlexItem4 = document.createElement('div');
+            const formFlexItem4 = document.createElement('div'); // Flex Item 4 
             formFlexItem4.className = 'form-flex-item';
             formFlexItem4.id = 'fourth-flex-item'
             parent.appendChild(formFlexItem4);
