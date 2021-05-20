@@ -21,7 +21,7 @@ addItemBtn.addEventListener('click', () => { // + Button
 });
 
 clearListBtn.addEventListener('click', () => { // Remove All Items Button
-    clearAllItems();
+    clearConfirmation();
 });
 
 // "todoInput" Input Value Filter
@@ -344,10 +344,86 @@ function inputClear() {
     todoInput.value = "";
 }
 
+function clearConfirmation() {
+    const background = document.createElement('div'); // Background
+    background.id = 'confirm-background';
+    main.prepend(background);
+
+        const container = document.createElement('div'); // Container
+        container.className = 'container-xxl';
+        container.id = 'confirm-container';
+        background.appendChild(container);
+
+            const parent = document.createElement('div'); // Parent
+            parent.id = 'confirm-parent';
+            container.appendChild(parent);
+
+                const content = document.createElement('div'); // Content
+                content.id = 'confirm-content';
+                parent.appendChild(content);
+
+                    const confirmTitle = document.createElement('h1'); // Title
+                    confirmTitle.id = 'confirm-title';
+                    confirmTitle.textContent = 'Delete All Tasks'
+                    content.appendChild(confirmTitle);
+
+                    const confirmText = document.createElement('p'); // Text
+                    confirmText.id = 'confirm-text';
+                    confirmText.textContent = 'Are you sure that you want to delete all tasks on your todo list?'
+                    content.appendChild(confirmText);
+
+                    const buttonsContainer = document.createElement('div'); // Buttons Container
+                    buttonsContainer.id = 'confirm-buttons-container';
+                    content.appendChild(buttonsContainer);
+
+                        const buttonNo = document.createElement('button'); // "No" Button
+                        buttonNo.type = 'button';
+                        buttonNo.textContent = 'No';
+                        buttonNo.id = 'option-no';
+                        buttonsContainer.appendChild(buttonNo);
+
+                        const buttonYes = document.createElement('button');
+                        buttonYes.type = 'button';
+                        buttonYes.textContent = 'Yes';
+                        buttonYes.id = 'option-yes';
+                        buttonsContainer.appendChild(buttonYes);
+
+    buttonNo.addEventListener('click', () => {
+        clearDeleteElements();
+    });
+
+    buttonYes.addEventListener('click', () => {
+        clearAllItems();
+        clearDeleteElements();
+    });
+}
+
+function clearDeleteElements() {
+    const background = document.getElementById('confirm-background');
+
+    if (background.hasChildNodes) { // If background has child elements
+        background.removeChild(background.firstChild);
+        main.removeChild(background);
+    } else { // Unexpected Error
+        console.error('Unexpected Error while deleting children of background.')
+    }
+}
+
 // Remove All Items
 function clearAllItems() {
     while (listParent.firstChild) {
         listParent.removeChild(listParent.lastChild)
+    }
+
+    if (!listParent.lastChild) {
+        todoInput.value = '';
+        todoInput.placeholder = 'Items have been removed!';
+
+        invalidFormInput(todoInput);
+
+        setTimeout(() => {
+            todoInput.placeholder = 'Add to your todo list';
+        }, 2000);
     }
 }
 
