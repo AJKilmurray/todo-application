@@ -86,6 +86,7 @@ body {
 
 body #main {
   min-height: 100vh;
+  padding-bottom: 5px;
   background-color: #191923;
   z-index: -5;
 }
@@ -181,20 +182,10 @@ body #main #content #todo-list {
 
 body #main #content #todo-list #todo-items .list-item {
   color: #fff;
+  width: 100%;
   border-bottom: 1px solid #191923;
   z-index: 5;
   padding: 30px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-animation: opacity-animation 0.5s ease-in;
           animation: opacity-animation 0.5s ease-in;
 }
@@ -243,9 +234,23 @@ body #main #content #todo-list #todo-items .list-item .complete-button {
           align-items: center;
 }
 
+body #main #content #todo-list #todo-items .list-item .delete-button:active,
+body #main #content #todo-list #todo-items .list-item .complete-button:active {
+  background-color: #24242F;
+}
+
 body #main #content #todo-list #todo-items .list-item .delete-button {
   margin-right: 10px;
   margin-left: 5px;
+}
+
+.item-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
 }
 
 #extended-form-background {
@@ -468,6 +473,34 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
 }
 
 @media (max-width: 900px) {
+  .list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 0px !important;
+  }
+  .list-item p {
+    margin-left: 10px !important;
+    font-size: 14px !important;
+  }
+  .list-item .item-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .list-item .item-container .flex-item {
+    margin-bottom: 10px;
+  }
+  .list-item .item-container .flex-item .arrow-right-circle {
+    margin-left: 0 !important;
+  }
   .extended-form-content {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
