@@ -8,8 +8,8 @@ From there, the user will be asked for a deadline (`date` and `time`), which wil
 The final list item will display **5** individual attributes. 
 
 1. Task Name
-2. Deadline Date
-3. Countdown Until Deadline
+2. Deadline (Date)
+3. Deadline (Time)
 4. Complete Task Button
 5. Delete Task Button
 
