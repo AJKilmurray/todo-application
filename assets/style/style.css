@@ -338,8 +338,8 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
 }
 
 .toggle-completion {
-  -webkit-text-decoration: line-through #00FFFB;
-          text-decoration: line-through #00FFFB;
+  -webkit-text-decoration: line-through #00FFFB 2px;
+          text-decoration: line-through #00FFFB 2px;
 }
 
 .form-flex-item {
@@ -558,6 +558,9 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
     width: 175px !important;
     font-size: 15px !important;
     margin-bottom: 20px;
+  }
+  #todo-add {
+    margin-bottom: 10px;
   }
   #todo-form {
     display: -webkit-box !important;
