@@ -17,7 +17,7 @@ For _now_, these will be the only attributes of each task. In the future, more f
 
 The **red** button will delete all items on the todo list. The user will be confronted with a confirmation upon clicking the button, to ensure the user does not accidentally lose all items on their todo list from a miss-click. The `No` option, will return to the home screen. The `Yes` option will delete all list items.
 
-## Design Sketch (Adobe XD)
+## Original Design Sketch (Adobe XD)
 ![Sketch](https://i.imgur.com/FYtDnhL.png)
 
 ## Technology Stack
