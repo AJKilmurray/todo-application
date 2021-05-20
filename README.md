@@ -22,6 +22,6 @@ The **red** button will delete all items on the todo list. The user will be conf
 
 ## Technology Stack
 * HTML5
-* Bootstrap (CSS) 
+* Bootstrap 
 * SCSS
 * JavaScript
