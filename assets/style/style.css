@@ -350,6 +350,99 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
   padding-right: 5px;
 }
 
+#confirm-background {
+  position: fixed;
+  z-index: 9;
+  height: 100vh;
+  width: 100vw;
+  background-color: #191923a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#confirm-background #confirm-container #confirm-content {
+  z-index: 10;
+  background-color: #20202A;
+  padding: 75px 0;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border: 3px solid #00FFFB;
+  -webkit-animation: opacity-animation 0.5s ease-in;
+          animation: opacity-animation 0.5s ease-in;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-title,
+#confirm-background #confirm-container #confirm-content #confirm-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-title {
+  font: 28px Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
+  color: #00FFFB;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-text {
+  font: 16px Montserrat, Arial, Helvetica, sans-serif;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container #option-no,
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container #option-yes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font: Poppins, Montserrat, Raleway, Roboto, Arial, Helvetica, sans-serif;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container #option-no {
+  background: #AF0000;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container #option-no:active {
+  background: #af0000a8;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container #option-yes {
+  background: #006E12;
+  margin-left: 10px;
+}
+
+#confirm-background #confirm-container #confirm-content #confirm-buttons-container #option-yes:active {
+  background: #006e12a8;
+}
+
 #fourth-flex-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -481,6 +574,12 @@ body #main #content #todo-list #todo-items .list-item .delete-button {
   }
   #todo-title p {
     font-size: 12px !important;
+  }
+  #confirm-content {
+    border: 1px solid #00FFFB !important;
+  }
+  #option-yes {
+    margin-right: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */
