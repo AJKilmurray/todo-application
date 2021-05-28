@@ -7,11 +7,11 @@ From there, the user will be asked for a deadline (`date` and `time`), which wil
 
 The final list item will display **5** individual attributes. 
 
-1. Task Name
-2. Deadline (Date)
-3. Deadline (Time of day)
-4. Complete Task Button
-5. Delete Task Button
+1. `Task Name`
+2. `Deadline (Date)`
+3. `Deadline (Time of day)`
+4. `Complete Task Button`
+5. `Delete Task Button`
 
 For _now_, these will be the only attributes of each task. In the future, more features like leaving notes will be implemented.
 
